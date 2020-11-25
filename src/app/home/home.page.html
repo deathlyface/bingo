@@ -1,20 +1,129 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="ion-padding">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <table>
+        <tr>
+            <th colspan="5" id="bingo-title">
+                <h1>Programming Bingo</h1>
+            </th>
+        </tr>
+        <tr>
+            <th colspan="5">
+                <span class="no-print">
+                    <ion-button size="small" (click)="reset()">Reset</ion-button>
+                    <ion-button size="small" (click)="new()">New</ion-button>
+                    <ion-button size="small" class="no-print" onclick="window.print()">
+                        <ion-icon name="print-outline"></ion-icon>&nbsp;Print
+                    </ion-button>
+                    <ion-button size="small" class="no-print" (click)="share()">
+                        <ion-icon name="share-social-outline"></ion-icon>&nbsp;Share
+                    </ion-button>
+                </span>
+            </th>
+        </tr>
+        <tr>
+            <td (click)="click(0)" [style.background-color]="getColor(0)">
+                <div [innerText]="getTextFromIndex(0)"></div>
+            </td>
+            <td (click)="click(1)" [style.background-color]="getColor(1)">
+                <div [innerText]="getTextFromIndex(1)"></div>
+            </td>
+            <td (click)="click(2)" [style.background-color]="getColor(2)">
+                <div [innerText]="getTextFromIndex(2)"></div>
+            </td>
+            <td (click)="click(3)" [style.background-color]="getColor(3)">
+                <div [innerText]="getTextFromIndex(3)"></div>
+            </td>
+            <td (click)="click(4)" [style.background-color]="getColor(4)">
+                <div [innerText]="getTextFromIndex(4)"></div>
+            </td>
+        </tr>
+        <tr>
+            <td (click)="click(5)" [style.background-color]="getColor(5)">
+                <div [innerText]="getTextFromIndex(5)"></div>
+            </td>
+            <td (click)="click(6)" [style.background-color]="getColor(6)">
+                <div [innerText]="getTextFromIndex(6)"></div>
+            </td>
+            <td (click)="click(7)" [style.background-color]="getColor(7)">
+                <div [innerText]="getTextFromIndex(7)"></div>
+            </td>
+            <td (click)="click(8)" [style.background-color]="getColor(8)">
+                <div [innerText]="getTextFromIndex(8)"></div>
+            </td>
+            <td (click)="click(9)" [style.background-color]="getColor(9)">
+                <div [innerText]="getTextFromIndex(9)"></div>
+            </td>
+        </tr>
+        <tr>
+            <td (click)="click(10)" [style.background-color]="getColor(10)">
+                <div [innerText]="getTextFromIndex(10)"></div>
+            </td>
+            <td (click)="click(11)" [style.background-color]="getColor(11)">
+                <div [innerText]="getTextFromIndex(11)"></div>
+            </td>
+            <td [style.background-color]="'#777'">
+                <div>FREE SPACE</div>
+            </td>
+            <td (click)="click(12)" [style.background-color]="getColor(12)">
+                <div [innerText]="getTextFromIndex(12)"></div>
+            </td>
+            <td (click)="click(13)" [style.background-color]="getColor(13)">
+                <div [innerText]="getTextFromIndex(13)"></div>
+            </td>
+        </tr>
+        <tr>
+            <td (click)="click(14)" [style.background-color]="getColor(14)">
+                <div [innerText]="getTextFromIndex(14)"></div>
+            </td>
+            <td (click)="click(15)" [style.background-color]="getColor(15)">
+                <div [innerText]="getTextFromIndex(15)"></div>
+            </td>
+            <td (click)="click(16)" [style.background-color]="getColor(16)">
+                <div [innerText]="getTextFromIndex(16)"></div>
+            </td>
+            <td (click)="click(17)" [style.background-color]="getColor(17)">
+                <div [innerText]="getTextFromIndex(17)"></div>
+            </td>
+            <td (click)="click(18)" [style.background-color]="getColor(18)">
+                <div [innerText]="getTextFromIndex(18)"></div>
+            </td>
+        </tr>
+        <tr>
+            <td (click)="click(19)" [style.background-color]="getColor(19)">
+                <div [innerText]="getTextFromIndex(19)"></div>
+            </td>
+            <td (click)="click(20)" [style.background-color]="getColor(20)">
+                <div [innerText]="getTextFromIndex(20)"></div>
+            </td>
+            <td (click)="click(21)" [style.background-color]="getColor(21)">
+                <div [innerText]="getTextFromIndex(21)"></div>
+            </td>
+            <td (click)="click(22)" [style.background-color]="getColor(22)">
+                <div [innerText]="getTextFromIndex(22)"></div>
+            </td>
+            <td (click)="click(23)" [style.background-color]="getColor(23)">
+                <div [innerText]="getTextFromIndex(23)"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="center" colspan="4" id="copyright">
+                <p>Generated by bingo.deathlyf.com</p>
+            </td>
+            <td class="center">
+                <img alt="Creative Commons License" style="border-width:0" width="150px" src="assets/cc.jpg" />
+            </td>
+        </tr>
+    </table>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <span class="center no-print">
+        <p>Best viewed on a horizontal screen.</p>
+        <p>Tip: Copy the URL to share this bingo.</p>
+    </span>
+
+    <footer class="no-print">
+        <p>Created by <a target="_blank" href="https://github.com/deathlyface">deathlyface (Brian)</a> | Contribute on <a target="_blank" href="https://github.com/deathlyface/bingo">GitHub</a> | This bingo is licensed under <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"> CC BY-NC-SA 4.0</a></p>
+    </footer>
+
+    <p id="secret" class="center no-print">Copy this <a id="secretlink" target="_blank" href="https://bingo.deathlyf.com/?0=0&1=0&2=0&3=0&4=0&5=0&6=0&7=0&8=0&9=0&10=0&11=0&12=0&13=0&14=0&15=0&16=0&17=0&18=0&19=0&20=0&21=0&22=0&23=0">link</a> to make all the statement "Use tabs".</p>
+
 </ion-content>
